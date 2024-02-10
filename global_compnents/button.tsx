@@ -1,10 +1,10 @@
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children?: React.ReactNode;
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  asChild?: boolean;
 }
-
-export default function Button({ children, ...rest }: ButtonProps) {
+export default function Button({ children }: ButtonProps) {
   return (
-    <button {...rest} className="bg-slate-900 border-0 rounded-8">
+    <button className="inline-flex items-center justify-center h-[2em] w-auto bg-red-900 rounded-sm">
       {children}
     </button>
   );
